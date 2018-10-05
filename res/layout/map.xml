@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- header -->
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/inc_header_map" />
+
+    <!-- contents -->
+
+    <FrameLayout
+        android:id="@+id/contentsFrameLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#C5CCD4" >
+
+        <com.google.android.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:apiKey="0EaXN3ysCAMIZNcuCHzpWkzpmqzbY3fT8qFEKrg"
+            android:clickable="true"
+            android:enabled="true" />
+        <!-- android:apiKey="0iPY8aeOh2wTHt_G9PBDVVGUzKdkPPWfur8lf8w" product API Key -->
+        <!-- android:apiKey="0iPY8aeOh2wROROi3BIEkHfV7pKZ-_Xaglj1Rtg" Debug API Key -->
+        <!-- android:apiKey="0o1FZVoAN_Okiq94-zFlcSLQEvFGbsN5alHukCQ" Debug API Key -->
+        <!-- android:apiKey="0omF7bwOvk6Ep-B0Luep1E1_7U6evBd_wp91QiQ" Debug API Key -->
+
+        <FrameLayout
+            android:id="@+id/contents_info_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#00000000" >
+        </FrameLayout>
+    </FrameLayout>
+
+</LinearLayout>

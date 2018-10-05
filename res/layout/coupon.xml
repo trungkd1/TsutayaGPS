@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+       <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/example_header"
+    android:layout_width="fill_parent"
+    android:background="@drawable/background_header"
+    android:layout_height="40dip"
+    >
+    <TextView
+        android:id="@+id/coupontext_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/title_coupon"
+        android:textSize="9pt"
+        android:textColor="#ffffff"
+        ></TextView>
+        
+    <TextView
+    	android:layout_height="wrap_content" 
+    	android:textAppearance="?android:attr/textAppearanceSmall" 
+    	android:id="@+id/coupontextView1" 
+    	android:text="" 
+    	android:textColor="#c9c9c9" 
+    	android:layout_width="wrap_content" 
+    	android:layout_alignParentRight="true"
+    	android:layout_alignParentBottom="true"
+    	android:layout_marginRight="7dip"
+    	android:layout_marginBottom="7dip"
+    	></TextView>
+    	
+    </RelativeLayout>
+      <FrameLayout android:id="@+id/couponFrameLayout"
+        android:layout_width="fill_parent" android:layout_height="fill_parent"
+        android:background="#C5CCD4">
+        <WebView android:id="@+id/tabContents_coupon"
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent"
+                 android:layout_weight="1"
+                 android:isScrollContainer="true"
+                 android:fadeScrollbars="true"
+                 android:scrollbarFadeDuration="1000"
+        />
+        <include android:id="@+id/loading" layout="@layout/loading" />
+    </FrameLayout>     
+</LinearLayout>

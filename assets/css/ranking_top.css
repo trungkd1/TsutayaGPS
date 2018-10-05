@@ -1,0 +1,246 @@
+ul li.arrow, dl dd.arrow {
+    padding: 5px;
+}
+
+ul.search-result li {
+    width: 100%;
+    left: 0px;
+    list-style-type: none;
+    list-style-position: inside;
+    background-color: #fff;
+    border-bottom: solid 1px #ccc;
+}
+
+.search-result-product-info {
+    width: 90%;
+    min-height: 40px;
+}
+.search-result-product-info p {
+    padding: 0 30px 2px 0;
+}
+.search-result-product-info img {
+    padding-bottom: 2px;
+}
+
+.box-wrapper {
+	padding: 3px 0px 0px 3px;
+    margin-right: 20px;
+    display: -webkit-box;
+    display: -moz-box;
+}
+
+.jacket-image-small-box {
+    width: 40px;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.jacket-image-small-box img {
+    width: 40px;
+}
+
+.jacket-image-medium-box {
+    width: 60px;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.jacket-image-medium-box img {
+    width: 60px;
+/*    max-height: 90px; */
+}
+
+#loading-more {
+    background-color: #fff;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: none;
+	border-bottom: solid 1px #aaaaaa;
+}
+
+#footer-message {
+    display: none;
+    background-color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 8px;
+}
+
+.item-icon {
+    vertical-align: top;
+}
+
+#frame{
+	padding-top: 0px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+#search-result-list-child {
+	background-color: transparent;
+}
+#search-result-list-child.list {
+    height: 100%;
+    padding-left: 10px;
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+}
+#search-result-list-child.list li{
+    border: none;
+}
+#search-result-list-child.list li .box-wrapper{
+    display: block;
+    padding-top: 0;
+    margin-right: 0;
+}
+h1 {
+    font-size: 12px;
+    line-height: 18px;
+    text-shadow: 0px 1px 1px #ffffff;
+    color: #333333;
+    margin: 15px 0px 0;
+    text-align: center;
+}
+h1 > p{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 2px;
+}
+h2 {
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: bold;
+    color: #333333;
+    margin: 0px;
+    text-align: left;
+    padding: 20px 0 20px 10px;
+}
+p.h3 {
+    margin: 3px 0 10px;
+    color: #666666;
+    font-size: 12px;
+    text-align: center;
+    text-shadow: 0 1px 1px #ffffff;
+}
+p.rank-title {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0px;
+    color: #333333;
+    text-align: left;
+    width: 100%;
+}
+.cssButton-left{
+    color: #fff;
+    width: 100%;
+    height: 30px;
+	border: solid 1px #041537;
+	border-right:none;
+    text-align: center;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    margin: 0px 0px 0px 0px;
+}
+.cssButton-center{
+    color: #fff;
+    width: 100%;
+    height: 30px;
+	border: solid 1px #041537;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+}
+.cssButton-light{
+    color: #fff;
+    width: 100%;
+    height: 30px;
+	border: solid 1px #041537;
+	border-left:none;
+    text-align: center;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    margin: 0px 0px 0px 0px;
+}
+.cssButton-select{
+    background: -webkit-gradient(linear, left top, left bottom, from(#212121), to(#1f1f1f));
+    background: -moz-linear-gradient(#212121, #1f1f1f);
+    color: #ffb609;
+}
+.cssButton-noSelect{
+    background: -webkit-gradient(linear, left top, left bottom, from(#444444), color-stop(0.8, #1f1f1f), to(#1a1a1a));
+    background: -moz-linear-gradient(#444444, #1f1f1f 80%, #1a1a1a);
+}
+div.ranking-gold,
+div.ranking-silver,
+div.ranking-bronze{
+    height: 12px;
+    padding-left: 15px;
+    margin-bottom: 5px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    -webkit-background-size: 12px 10px;
+    background-size: 12px 10px;
+}
+div.ranking-gold {
+    background-image: url("../images/icon_crown_gold.png");
+    color: #c0a848;
+}
+div.ranking-silver {
+    background-image: url("../images/icon_crown_silver.png");
+    color: #999999;
+}
+div.ranking-bronze {
+    background-image: url("../images/icon_crown_bronze.png");
+    color: #ad532b;
+}
+div.ranking-none {
+    margin-bottom: 5px;
+}
+p.rank-0 {
+    color: #0066cc;
+    text-align: center;
+    padding-bottom: 4px;
+}
+p.rank-1 {
+    color: #999999;
+    text-align: center;
+    padding-bottom: 4px;
+}
+p.rank-2 {
+    color: #000000;
+    text-align: center;
+    padding-bottom: 4px;
+}
+p.rank-3 {
+    color: orange;
+    text-align: center;
+    padding-bottom: 4px;
+}
+p.ranking {
+    font-size: 12px;
+}
+p.role-name {
+    text-align: leftt;
+    font-size: 10px;
+}
+p.artist-name {
+    text-align: left;
+    font-size: 10px;
+    /* ‚¢‚Á‚½‚ñŒÅ’è */
+    width: 150px;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+table.artist-list-table {
+    padding-top: 15px;
+    color: #666666;
+}

@@ -1,0 +1,63 @@
+h1 {
+	color: #666666;
+	font: bold 14px/16px Helvetica;
+	margin: 15px 10px 5px;
+	text-shadow: 0 1px 1px #FFFFFF;
+	text-align: left;
+}
+
+h1 span {
+    font-size: 10px;
+    margin-left: 2px;
+}
+h3 {
+    margin: 6px 0;
+    padding: 0px;
+	color: #000000;
+	font-size: 15px;
+	line-height: 15px;
+}
+
+input.submit-button,
+input.map-button {
+    width: 48%;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 10px 0;
+    border:none;
+    border-radius: 5px;
+}
+input.submit-button{
+   margin-right: 4%;
+}
+
+
+div#more {
+    text-align: center;
+    padding: 8px;
+}
+
+ul.bordered li {
+    border-bottom: solid 1px #ccc;
+}
+.store-list-item{
+    
+}
+.store-list-item p{
+    padding: 0px;
+    margin: 0 20px 0 0;
+    font-size: 10px;
+    line-height: 14px;
+}
+.store-list-item p.add-store-button {
+    text-align: center;
+	margin: 10px 20px 0 0;
+}
+#search-result-items #search-result-items {
+   border-top: solid 1px #aaaaaa;
+    border-bottom: solid 1px #aaaaaa;
+}
+#store-list {
+	padding: 15px 10px 10px;
+	mine-height: auto;
+}

@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="user-scalable=no, width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/search_form.css" />
+    <title>店舗検索</title>
+    <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+    <script type="text/javascript" src="js/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="js/json.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/store.js"></script>
+    <script type="text/javascript">
+$(function() {
+	
+    renderStoreList();
+    $('#coupon-logout').click(function(){
+    	doLogOut();
+    })
+    // $('#search-button').attr('disabled','true');
+//    var createInputChecker = function( buttonId, inputId ) {
+//        return function() {
+//            var v = $('#' + inputId).val();
+//            v = v.replace(/^[ 　]+/g,'').replace(/[ 　]+$/g, '');
+//            var button = $('#' + buttonId );
+//            if ( v != '' ) {
+//                button.attr('disabled','');
+//            } else {
+//                button.attr('disabled','true');
+//            }
+//        };
+//    };
+//
+//    var check2 = createInputChecker('store-search-button', 'store-search-keyword');
+//    var checkInput = function() {
+//        check2();
+//        setTimeout( checkInput, 200 );
+//    }
+//
+//    setTimeout( checkInput, 200 );
+    $('#store_search_form').unbind('submit').submit(function(){
+		if (!$('#store-search-keyword').val()){
+			app.alert("", "検索条件が入力されていません。");
+		}else{
+			app.goTo($(this).attr("action")+'?'+$(this).serialize());
+		}
+		return false;
+	});
+ 
+});
+
+var StoreListTemplate = new TTemplate(
+    '<li id="store-item-{storeId}" class="arrow" onclick="storeItemClick(this)">'
+    + '<div class="arrow-block_important">{storeName}</div>'
+  + '</li>'
+);
+function renderStoreList() {
+    var html = [];
+    var storeList = new StoreList();
+ 
+    var lst = localStorage.loginStatus;
+	if(lst != null && lst != undefined){
+		if(app.getUserLoginStatus() == "0"){
+			storeList.checkLogin();
+		}
+	} else if(lst == null || lst == undefined){
+		if(app.getUserLoginStatus() != "0"){
+			storeList.checkLogin();
+		}
+	}    
+    
+    var storeIdList = storeList.getStoreIdList();
+    if (storeIdList && storeIdList.length == 0 ) {
+        html.push( '<div id="store-list" class="default-padding rounded">'
+            +'在庫を検索するには、よく使うお店を登録しておくと便利です。'
+            +'お店を検索して、店舗を登録してください。</div>' );
+    } else {
+        html.push('<ul id="store-item-list_important" class="rounded_important bordered_important">');
+        for (var i = 0; i < storeIdList.length; i++ ) {
+            var storeId = storeIdList[i];
+			app.updateRegisteredStore(storeId, 1);
+            html.push(
+                StoreListTemplate.render({
+                    storeId: storeId,
+                    storeName: storeList.getStoreName(storeId)
+                })
+            );
+        }
+        html.push('</ul>');
+    }
+    $('#store-list-block').html(html.join(''));
+	
+}
+
+function refreshView() {
+    renderStoreList();
+}
+
+function storeItemClick(e) {
+    var elem = $(e);
+    var storeId = elem.attr('id').replace('store-item-', '');
+	//alert(storeId);
+    app.goTo("store_detail.html?storeId=" + storeId);
+}
+
+function blankSite(url){
+	var event = window.event;
+   	event.preventDefault();
+    event.stopPropagation();
+    android.blank(url);
+}
+
+function bindOnClick(){
+	blankSite(android.getBannerOnclickUrl());
+}
+
+function mapClick(){	
+    app.goTo("app::storemap::");
+}
+
+var CampaignTemplate = new TTemplate('<a id="store-campaign"><img id="banner" src={CURL} ></a>');
+var img = new Image();
+var curl = '';
+
+
+function CampaignLoad(){
+	 
+	curl = android.getBannerUrl();
+	  img.src = curl;
+		var html = [];
+	  html.push(CampaignTemplate.render({CURL: curl}));	
+	    $('#store-campaign-form').html(html.join(''));
+	    $('#store-campaign-form').attr('style','width:0;height:0; display:none');
+	    $('#store-campaign img')
+	    	.load(function(){
+	    		$('#store-campaign-form').attr('style','height:100%; margin-left:10px; margin-right:10px; display:block');
+	    		$('#banner').css("width", '100%');
+	    		
+	    	})
+	    	.error(function(){
+	    		
+	    	});
+}
+
+</script>
+</head>
+
+<body id="body">
+    <div id="home">
+        <h1 class="page-title h1_important">店舗検索</h1> 
+          <h3 class="h3_important">TSUTAYA店舗検索</h3>
+          <div id="store-search-form">
+          <form method="GET" action="store_search_result.html" id="store_search_form">
+              <input autocapitalize="off" autocorrect="off" autocomplete="off" id="store-search-keyword" type="search" name="k" placeholder="店舗名・住所の一部を入力" />
+              <input id="store-search-button" type="submit" class="submit" value="" class="search-button" />
+		      <h3 id="h3_map_store_search">マップから店舗検索</h3>
+		      <button type="button" id="store-map-button" onclick="mapClick()" >現在位置(GPS)から店舗検索</button>	
+          </form>
+          </div>
+          <hr>
+          <h3 class="h3_important">登録店舗一覧<span>(最大5店舗まで)</span></h3>
+          <div id="store-list-block">
+          </div>
+      </div>
+      <div id="store-campaign-form" onClick="bindOnClick();" ></div>
+    	<div class="footer-padding"></div>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="user-scalable=no, width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/search_form.css" />
+    <title>在庫検索</title>
+    <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+    <script type="text/javascript" src="js/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="js/json.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/search_form.js"></script>
+</head>
+
+<body id="body">
+    <div id="home">
+<!--
+        <h3><a href="app::areastock::087279971">087279971</a></h3>
+ -->
+         <div id="content">
+            <br />
+          <h3>商品を検索</h3>
+          <div>
+              <form method="GET" action="search_result.html">
+          <ul class="rounded bordered">
+            <li>
+              <input autocapitalize="off" autocorrect="off" autocomplete="off" id="search-keyword" type="search" name="k"  />
+            </li>
+            <li>
+              <select id="search-item" name="item">
+                <!--<option value="">すべての商品</option>-->
+                <option value="011">レンタルDVD</option>
+                <option value="012">レンタルBlu-ray</option>
+                <option value="013">レンタルVHS</option>
+                <option value="020">レンタルCD</option>
+                <option value="030">レンタルコミック</option>
+                <option value="111">セルDVD</option>
+                <option value="112">セルBlu-ray</option>
+                <option value="113">セルVHS</option>
+                <option value="120">セルCD</option>
+                <option value="130">セル本</option>
+                <option value="140">セルゲーム</option>
+              </select>
+            </li>
+            <li>
+            <input id="search-button" type="submit" class="submit" value="検索"  class="search-button" />
+            </li>
+          </ul>
+          </form>
+      </div>
+
+      <h3>登録店舗からのお知らせ</h3>
+      <ul id="information-list" class="rounded">
+      </ul>
+    </div>
+    <!--  <div class="footer-padding"></div> -->
+  </body>
+</html>

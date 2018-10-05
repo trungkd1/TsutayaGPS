@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="user-scalable=no, width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--<link rel="stylesheet" href="jqtouch/jqtouch/jqtouch.css" />-->
+    <!--<link rel="stylesheet" href="jqtouch/themes/apple/theme.min.css" />-->
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/ranking_top.css" />
+    <title>ランキングトップ</title>
+    <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+    <script type="text/javascript" src="js/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="js/json.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/ranking_top.js"></script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+    <div id="ranking-top">
+        <h1 id="page-title">TSUTAYA ランキング<p></p></h1>
+        <p class="h3" id="page-date"></p>
+
+        <div id="ranking-tab" class="hdtxt">
+            <ul>
+                <li><input type="button" name="search" value="デイリー" id="rankingDaily" onclick="onRankingTypeClick('daily');" class="cssButton-left cssButton-select"/></li>
+                <li><input type="button" name="search" value="週間" id="rankingWeekly" onclick="onRankingTypeClick('weekly');" class="cssButton-center cssButton-noSelect"/></li>
+                <li><input type="button" name="search" value="月間" id="rankingMonthly" onclick="onRankingTypeClick('monthly');" class="cssButton-light cssButton-noSelect"/></li>
+            </ul>
+        </div>
+    </div>
+    <h3>レンタル</h3>
+    <ul class="list-frame bordered rounded">
+        <li>
+            <ul id="dvd-rental-ranking" class="list search-result-list0">
+                <li id="01-1" class="arrow" onclick="onRankingConcentrationClick(this)">
+                    <div class="box-wrapper">
+                        <div class="jacket-image-small-box">
+                            <img id="dvd011" src="img/ajax-loader.gif" class="lazyloadimage">
+                        </div>
+                        <div class="search-result-product-info">
+                            <h2>DVDレンタルランキング</h2>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul id="cd-rental-ranking" class="list bordered search-result-list1">
+                <li id="02-1" class="arrow" onclick="onRankingConcentrationClick(this)">
+                    <div class="box-wrapper">
+                        <div class="jacket-image-small-box">
+                            <img id="cd021" src="img/ajax-loader.gif" class="lazyloadimage">
+                        </div>
+                        <div class="search-result-product-info">
+                            <h2>CDレンタルランキング</h2>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul id="commic-rental-ranking" class="list bordered search-result-list0">
+                <li id="04-1" class="arrow" onclick="onRankingConcentrationClick(this)">
+                    <div class="box-wrapper">
+                        <div class="jacket-image-small-box">
+                            <img id="commic041" src="img/ajax-loader.gif" class="lazyloadimage">
+                        </div>
+                        <div class="search-result-product-info">
+                            <h2>コミックレンタルランキング</h2>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>販売</h3>
+    <ul class="list-frame bordered rounded">
+        <li>
+            <ul id="dvd-sale-ranking" class="list bordered search-result-list0">
+                <li id="01-2" class="arrow" onclick="onRankingConcentrationClick(this)">
+                    <div class="box-wrapper">
+                        <div class="jacket-image-small-box">
+                            <img id="dvd012" src="img/ajax-loader.gif" class="lazyloadimage">
+                        </div>
+                        <div class="search-result-product-info">
+                            <h2>DVD販売ランキング</h2>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul id="cd-sale-ranking" class="list bordered search-result-list1">
+                <li id="02-2" class="arrow" onclick="onRankingConcentrationClick(this)">
+                    <div class="box-wrapper">
+                        <div class="jacket-image-small-box">
+                            <img id="cd022" src="img/ajax-loader.gif" class="lazyloadimage">
+                        </div>
+                        <div class="search-result-product-info">
+                            <h2>CD販売ランキング</h2>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul id="game-sale-ranking" class="list bordered search-result-list0">
+                <li id="03-2" class="arrow" onclick="onRankingConcentrationClick(this)">
+                    <div class="box-wrapper">
+                        <div class="jacket-image-small-box">
+                            <img id="game032" src="img/ajax-loader.gif" class="lazyloadimage">
+                        </div>
+                        <div class="search-result-product-info">
+                            <h2>ゲーム販売ランキング</h2>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul id="book-sale-ranking" class="list bordered search-result-list1">
+                <li id="04-2" class="arrow" onclick="onRankingConcentrationClick(this)">
+                    <div class="box-wrapper">
+                        <div class="jacket-image-small-box">
+                            <img id="book042" src="img/ajax-loader.gif" class="lazyloadimage">
+                        </div>
+                        <div class="search-result-product-info">
+                            <h2>ブック販売ランキング</h2>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

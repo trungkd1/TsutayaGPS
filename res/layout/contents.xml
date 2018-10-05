@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <include
+        android:id="@+id/sidemenu"
+        layout="@layout/inc_sidemenu" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <jp.co.tsutaya.android.ranking.slide.ScrollerLinearLayout
+            android:id="@+id/menu_content_side_slide_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <include
+                android:id="@+id/header"
+                layout="@layout/inc_header" />
+
+            <FrameLayout
+                android:id="@+id/contentsFrameLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/header"
+                android:background="#C5CCD4" >
+
+                <WebView
+                    android:id="@+id/tabContents"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:fadeScrollbars="true"
+                    android:isScrollContainer="true"
+                    android:scrollbarFadeDuration="1000" />
+
+                <include
+                    android:id="@+id/loading"
+                    layout="@layout/loading" />
+            </FrameLayout>
+        </jp.co.tsutaya.android.ranking.slide.ScrollerLinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

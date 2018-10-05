@@ -1,0 +1,75 @@
+p.title {
+    font-size: 15px;
+    line-height: 17px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0 0 2px;
+    width:98%;
+}
+
+.description-box {
+    width: 80%;
+}
+.description-box ul{
+    font-size: 10px;
+    color: #666666;
+    line-height: 16px;
+}
+
+p.detail {
+    font-size: 12px;
+    line-height: 1.5em;
+    padding: 10px;
+    text-align: left;
+}
+p.review {
+    margin: 0;
+    padding: 0;
+}
+p.copyright {
+    font: 8px Helvetica;
+    color: rgb(3,3,3);
+    margin: 5px;
+    text-align: left;
+    padding: 10px 5px;
+}
+.box-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+}
+
+ul li {
+    border-bottom: none;
+}
+
+.jacket-image-medium-box {
+    width: 60px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.jacket-image-medium-box img {
+    max-width: 60px;
+}
+
+
+.link-label span{
+    font-size: 12px;
+    display: block;
+}
+
+.product-header-section {
+	margin-top:10px;
+    padding: 10px;
+}
+
+.star-margin {
+    vertical-align: -2px;
+}
+p.detail.caststaff {
+    padding: 3px 10px;
+}
+
+p.causion {
+   font-size: 12px;
+}

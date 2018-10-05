@@ -1,0 +1,82 @@
+.rounded{
+	border: 1px solid #ccc;
+}
+
+ul li.arrow, dl dd.arrow {
+	padding: 10px 5px;
+}
+
+.search-result-product-info {
+    float: left;
+}
+.search-result-product-info h2{
+	font-weight:400;
+    width: 230px;
+}
+.box-wrapper:after {
+    clear: both;
+    content: "";
+    display: block;
+    visibility: hidden;
+}
+
+.jacket-image-small-box {
+    float: left;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: #e2e2e3;
+}
+
+.jacket-image-small-box img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.tag{
+    padding-left: 5px;
+    margin-bottom: 6px;
+}
+.tag span.genre-disp{
+    background-color: #999999;
+    color: #ffffff;
+    width: 52px;
+    min-width: 52px;
+    vertical-align: top;
+}
+
+h2 {
+    font: Helvetica;
+    text-shadow: 1px 1px 1px #fff;
+    color: #092253;
+    margin: 0px;
+    text-align: left;
+    padding-left: 5px;
+    line-height: 17px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 15px;
+    
+}
+h3 {
+    margin-top: 15px;
+}
+ul li.arrow0 {
+    background-image: url(../img/chevron.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+ul li.arrow1 {
+    background-image: url(../img/chevron.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-color:#E6E6E6
+}
+ul li.arrow1:last-child {
+    background-image: url(../img/chevron.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-color:#E6E6E6;
+    -webkit-border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+}

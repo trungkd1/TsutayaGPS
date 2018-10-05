@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/example_header"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/background_header" >
+
+        <TextView
+            android:id="@+id/image_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/top" >
+        </TextView>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/topFrameLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#C5CCD4" >
+
+        <WebView
+            android:id="@+id/tabContents_plane"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:fadeScrollbars="true"
+            android:isScrollContainer="true"
+            android:scrollbarFadeDuration="1000" />
+
+        <include
+            android:id="@+id/loading"
+            layout="@layout/loading" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+	<head>
+		<meta content="user-scalable=no, width=device-width" name="viewport">
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/work_detail.css" rel="stylesheet">
+		<title>作品情報</title>
+		<script src="js/jquery-1.4.2.js" type="text/javascript"></script>
+		<script src="js/jquery.lazyload.js" type="text/javascript"></script>
+		<script src="js/json.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div id="body">
+			<h1 class="page-title header">
+				作品情報
+			</h1>
+		</div>
+		<div id="product-header" class="rounded product-header-section">
+			<div class="box-wrapper">
+				<div class="jacket-image-medium-box">
+					<img onload="loadingImage(this, 'http://www.tsutaya.co.jp/images/jacket/07876/4988142902627_1M.jpg')" class="jacket-image-medium" title="" alt="" src="http://www.tsutaya.co.jp/images/jacket/07876/4988142902627_1M.jpg">
+				</div>
+				<div class="description-box">
+					<p class="title">
+						ウエスト・サイド物語     (1961年) 
+					</p>
+					<ul>
+						<li>洋画ドラマ&nbsp;&gt;&nbsp;ミュージカルダンス</li>
+						<li>制作国&nbsp;:&nbsp;アメリカ</li>
+						<li>制作年&nbsp;:&nbsp;1961</li>
+						<li>公開日&nbsp;:&nbsp;1961年12月23日(土)</li>
+						<li>上映時間&nbsp;:&nbsp;152</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="review-link">
+			<h1>
+				在庫検索
+			</h1>
+			<ul class="rounded bordered">
+				<li onclick="onRentalStockSearchLinkClick('123');" class="arrow">
+					<div class="arrow-block">
+						<span class="link-label">お店でレンタル在庫検索</span>
+					</div>
+				</li>
+			</ul>
+			<h1>
+				レビューを見る
+			</h1>
+			<ul class="rounded bordered">
+				<li onclick="onReviewLinkClick('10000551');" class="arrow">
+					<p class="detail review">
+						(4.8点/13件のレビュー)
+					</p>
+					<img onload="loadingImage(this, 'images/review_icon_10.png')" class="star-margin" title="" alt="" src="file:///C:/Users/nishi/Desktop/assets/images/review_icon_10.png"></li>
+			</ul>
+		</div>
+		<div id="stock-search-link">
+			<h1>
+				在庫検索
+			</h1>
+			<ul class="rounded bordered">
+				<li onclick="onRentalStockSearchLinkClick('10000556');" class="arrow">
+					<div class="arrow-block">
+						<span class="link-label">お店でレンタル在庫検索</span>
+					</div>
+				</li>
+				<li onclick="onSaleStockSearchLinkClick('10000556');" class="arrow">
+					<div class="arrow-block">
+						<span class="link-label">お店で販売在庫検索</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div id="renkei-frame-link">
+			<h1>
+				この商品は他のサービスでも扱っています
+			</h1>
+			<ul class="rounded angular bordered">
+				<li onclick="app.goTo('app::safari::http://www.discas.net/d/d/entry_site.pl?SITE=ccc_p_tol_tsutayasearchsakuhin&amp;AP=ggd&amp;GID=10000556')" class="arrow">
+					<div class="arrow-block">
+						<span class="link-label">ネットで宅配レンタル</span>
+					</div>
+				</li>
+				<li onclick="app.goTo('app::safari::http://sp.tsutaya.co.jp/dir_result.html?searchType=3&amp;sakuhinCd=10000556&amp;sakuhinName=%E3%82%A6%E3%82%A8%E3%82%B9%E3%83%88%E3%83%BB%E3%82%B5%E3%82%A4%E3%83%89%E7%89%A9%E8%AA%9E&amp;sortingOrder=%E7%99%BA%E5%A3%B2%E6%97%A5%E3%81%AE%E6%96%B0%E3%81%97%E3%81%84%E9%A0%86&amp;stop_it_series&amp;ko=tsearch_sk')" class="arrow">
+					<div class="arrow-block">
+						<span class="link-label">ネットで買う</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div id="relate-movie-link">
+			<h1>
+				関連映像をみる
+			</h1>
+			<ul class="rounded bordered">
+				<li onclick="onYouTubeLinkClick('ウエスト・サイド物語');" class="arrow">
+					<div class="arrow-block">
+						<span class="link-label">関連映像(YouTube検索)</span>
+						<p class="causion">
+							※外部サイトへ遷移します
+						</p>
+					</div>
+				</li>
+				<li onclick="onYouTubeLinkClick('ＷＥＳＴ&#12288;ＳＩＤＥ&#12288;ＳＴＯＲＹ');" class="arrow">
+					<div class="arrow-block">
+						<span class="link-label-originalsearch">Original Title Search(YouTube)</span>
+						<p class="causion">
+							※外部サイトへ遷移します
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div id="comment-link">
+			<h1>
+				解説
+			</h1>
+			<ul class="rounded bordered">
+				<li>
+					<div>
+						<p class="detail">
+							ニューヨークのダウンタウン、ウエスト・サイド。移民の多いこの町では、かねてから対立関係にあるベルナルド率いるプエルトリコ移民のシャーク団と、リフ率いるジェット団の2つのグループが、ことある毎に衝突を繰り返してきた。ある日、ベルナルドの妹マリアは、兄たちシャーク団に初めてのダンス・パーティへ連れて行かれる。そこへジェット団のメンバーも現われ、2つのグループは競うように踊り始めた。そんな中、マリアはジェット団の元リーダー、トニーに出会い、互いに心を奪われる。だが、それは許されない恋の始まりだった…。
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div id="tune-link">
+		</div>
+		<div id="cast-staff-link">
+			<h1>
+				キャスト／スタッフ
+			</h1>
+			<ul class="rounded bordered">
+				<li>
+					<p class="detail caststaff">
+						監督&nbsp;:&nbsp;ロバート・ワイズ
+					</p>
+				</li>
+				<li>
+					<p class="detail caststaff">
+						監督&nbsp;:&nbsp;ジェローム・ロビンス
+					</p>
+				</li>
+				<li>
+					<p class="detail caststaff">
+						原作者&nbsp;:&nbsp;ジェローム・ロビンス
+					</p>
+				</li>
+				<li>
+					<p class="detail caststaff">
+						原作者&nbsp;:&nbsp;アーサー・ローレンツ
+					</p>
+				</li>
+				<li>
+					<p class="detail caststaff">
+						脚本&nbsp;:&nbsp;アーネスト・レーマン
+					</p>
+				</li>
+				<li>
+					<p class="detail caststaff">
+						出演者&nbsp;:&nbsp;ナタリー・ウッド
+					</p>
+				</li>
+				<li>
+					<p class="detail caststaff">
+						出演者&nbsp;:&nbsp;リチャード・ベイマー
+					</p>
+				</li>
+				<li>
+					<p class="detail caststaff">
+						出演者&nbsp;:&nbsp;ジョージ・チャキリス
+					</p>
+				</li>
+				<li>
+					<p class="detail caststaff">
+						出演者&nbsp;:&nbsp;リタ&#12288;モレノ
+					</p>
+				</li>
+				<li>
+					<p class="detail caststaff">
+						出演者&nbsp;:&nbsp;ラス・タンブリン
+					</p>
+				</li>
+				<li>
+					<p class="detail caststaff">
+						出演者&nbsp;:&nbsp;タッカー・スミス
+					</p>
+				</li>
+				<li>
+					<p class="detail caststaff">
+						出演者&nbsp;:&nbsp;デヴィッド・ウィンタース
+					</p>
+				</li>
+				<li>
+					<p class="detail caststaff">
+						出演者&nbsp;:&nbsp;トニー・モルデンテ
+					</p>
+				</li>
+				<li>
+					<p class="detail caststaff">
+						出演者&nbsp;:&nbsp;サイモン・オークランド
+					</p>
+				</li>
+				<li>
+					<p class="detail caststaff">
+						出演者&nbsp;:&nbsp;ジョン・アスティン
+					</p>
+				</li>
+				<li>
+					<p class="detail caststaff">
+						音楽&nbsp;:&nbsp;アーウィン・コスタル
+					</p>
+				</li>
+				<li>
+					<p class="detail caststaff">
+						音楽&nbsp;:&nbsp;シド・ラミン
+					</p>
+				</li>
+			</ul>
+		</div>
+		<div id="copyright-link">
+			<ul class="rounded bordered">
+				<li>
+					<p class="copyright">
+						(C)2012 Metro-Goldwyn-Mayer Studios Inc． All Rights Reserved． Distributed by Twentieth Century Fox Home Entertainment LLC．
+						<br>
+						※記載内容は商品によって異なる場合があります。
+					</p>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout07"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="20" >
+
+            <Button
+                android:id="@+id/Button08"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="GGGGGGG" >
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout06"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="20" >
+
+            <Button
+                android:id="@+id/Button07"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="HHH" >
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout05"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="20" >
+
+            <Button
+                android:id="@+id/Button06"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="II" >
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout04"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="20" >
+
+            <Button
+                android:id="@+id/Button05"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="JJJ" >
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout12"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="30" >
+
+            <Button
+                android:id="@+id/Button13"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="KKKK" >
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout11"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="30" >
+
+            <Button
+                android:id="@+id/Button12"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="日本語" >
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout10"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="30" >
+
+            <Button
+                android:id="@+id/Button11"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="日本頑張る" >
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout09"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="30" >
+
+            <Button
+                android:id="@+id/Button10"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="日本は不滅" >
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout08"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="30" >
+
+            <Button
+                android:id="@+id/Button09"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="前へ！" >
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

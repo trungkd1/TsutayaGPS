@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    border: none;
+}
+h1 {
+	font-size:18px;
+}
+h2, h3 {
+	font-size:16px;
+}
+h4, h5, h6 {
+	font-size:14px;
+}
+div, p, dl, dt, dd {
+    border: none;
+}
+ul, ol, ul li, ol li {
+	list-style:none;
+}
+table, tr, th, td {
+	border: 0;
+	border-collapse: collapse;
+}
+a,img {
+	border: 0;
+}
+a {
+-webkit-tap-highlight-color:rgba(102,102,102,0.40);
+}
+a{
+    background-color:transparent;
+    -webkit-touch-callout:none;
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+}
+.touchstyle { background-color:yellow;}
+.notouchstyle { background-color:transparent;}
+body {
+	padding-bottom: 20px;
+    font-size: 14px;
+	line-height: 1.35;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color:#4444ff;
+    background-color:#CCC;
+/*	background-color:#f4f4f4; */
+	width:100%;
+	background: url(../img/top/bg_top.png) repeat 0 0 #999;
+}
+
+#wrapper {
+	width:100%;
+	font-style: normal;
+	font-weight: bold;
+	display:block;
+}
+
+#contents{
+	padding: 10px;
+}
+
+#slideshow{
+	width: 100%;
+	background-color: #fff;
+	margin-bottom: 20px;
+}
+#slideshow .slideimage {
+	width: 100%;
+	height: 180px;
+}
+#slideshow .slideimage img{
+	max-width: 100%;
+	max-height: 100%;
+}
+#slideshow .slideinfo{
+	padding: 5px;
+}
+#slideshow .slideinfo h2{
+	text-align: center;
+	color: #002554;
+}
+#slideshow .slideinfo p{
+	text-align:center;
+	color: #67748b;
+	font-size: 12px;
+}
+ul.menu{
+	width: 100%;
+	margin-bottom: 10px;
+}
+ul.menu:after{
+	content: "";
+	display: block;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+}
+ul.menu:last-child{
+	margin-bottom: 0;
+}
+ul.menu li{
+	display:block;
+	float: left;
+	margin-right: 2%;
+	text-align: center;
+	font-size: 8px;
+}
+ul.menu li:last-child{
+	margin-right: 0;
+}
+
+ul.menu li a{
+	display: block;
+	padding: 10px 5px 10px;
+	color: #67748b;
+	background-color: #fff;
+	text-decoration: none;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* タップ時のハイライト */
+ul.menu a.iScrollHover {
+	background-color: #e6e6e6;
+	border-color:#002554;
+}
+ul.menu.large{
+	margin-bottom: 20px;
+}
+ul.menu.large li{
+	width: 49%;
+}
+ul.menu.large li a{
+	font-size: 14px;
+	padding-top: 80px;
+}
+ul.menu.small li{
+	width: 32%;
+}
+ul.menu.small li a{
+	padding-top: 50px;
+}
+
+#fbContents{
+	width: 100%;
+	background-color: #fff;
+}
+#fbContents ul{
+	padding:10px;
+}
+#fbContents ul li{
+	padding:10px;
+	border-bottom: 1px solid #000;
+}
+
+
+/* 320以上 */
+
+@media screen and (min-width: 320px) {
+	#bnrBox #bnrFrame {
+		width: 308px;
+		height: 80px;
+	}
+}
+
+/* 480以上 */
+
+@media screen and (min-width: 480px) {
+	#bnrBox #bnrFrame {
+		width: 464px;
+		height: 120px;
+	}
+}
+
+/* 540以上 */
+
+@media screen and (min-width: 540px) {
+	#bnrBox #bnrFrame {
+		width: 524px;
+		height: 135px;
+	}
+}
+
+/* 720以上 */
+
+@media screen and (min-width: 720px) {
+	#bnrBox #bnrFrame {
+		width: 704px;
+		height: 180px;
+	}
+}

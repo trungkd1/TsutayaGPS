@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- メニューボタンID -->
+    <integer name="menu_home">0</integer>
+    <integer name="menu_top">5</integer>
+    <integer name="menu_stocksearch">10</integer>
+    <integer name="menu_product_detail">12</integer>
+    <integer name="menu_work_detail">14</integer>
+    <integer name="menu_ranking">20</integer>
+    <integer name="menu_ranking_genre">22</integer>
+    <integer name="menu_ranking_detail">24</integer>
+    <integer name="menu_release">40</integer>
+    <integer name="menu_release_dvd">42</integer>
+    <integer name="menu_release_cd">44</integer>
+    <integer name="menu_release_game">46</integer>
+    <integer name="menu_release_comic">48</integer>
+    <integer name="menu_favorite">50</integer>
+    <integer name="menu_settings">60</integer>
+    <integer name="menu_coupon">70</integer>
+    <integer name="menu_storesearch">80</integer>
+    <integer name="menu_tlog">90</integer>
+    <integer name="menu_related">100</integer>
+    <integer name="menu_tsutayaar">110</integer>
+    <integer name="menu_facebook">120</integer>
+    
+    
+    <!-- サイドメニュースライド基準幅 -->
+    <integer name="slide_base_width">68</integer>
+
+</resources>

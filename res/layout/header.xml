@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/example_header"
+    android:layout_width="fill_parent"
+    android:background="@drawable/background_header"
+    android:layout_height="40px"
+    android:gravity="center"
+    >
+    <ImageView
+        android:src="@drawable/top"
+        android:id="@+id/image_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ></ImageView>
+</RelativeLayout>

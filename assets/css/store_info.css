@@ -1,0 +1,31 @@
+h1 {
+	margin: 10px;
+	color: #000;
+    border: none;
+    text-align: center;
+    -webkit-text-shadow: none;
+    text-shadow: none;
+}
+#store-list {
+	padding: 15px 10px 10px;
+	min-height: 20px;
+}
+ul#information-list li{
+    padding: 10px;
+}
+ul#information-list h4 {
+    color: #FF6600;
+    font-size: 15px;
+    padding-top: 4px;
+    padding-bottom: 6px;
+}
+
+ul#information-list li p{
+	padding: 0 5px;
+}
+ul#information-list li p.last-update {
+    text-align: right;
+    color: #666666;
+    margin-top: 4px;
+    font-size: 10px;
+}

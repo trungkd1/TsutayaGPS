@@ -1,0 +1,102 @@
+/**********************************/
+/* Format Browser's defined style */
+/**********************************/
+
+body,
+h1,h2,h3,h4,h5,h6,p,
+ul,ol,li,dl,dt,dd,
+table,th,td,
+form,fieldset,
+address,pre,em,strong,
+blockquote,q,cite,dfn,var,code,kbd,samp,
+abbr,acronym,article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary{
+margin:0;
+padding:0;
+border: 0;
+font-size:100%;
+font-weight:normal;
+font-style:normal;
+vertical-align: baseline;
+text-decoration:none;
+background:transparent;
+text-align: left;
+}
+
+abbr,acronym{
+border:none;
+font-variant:normal;
+}
+
+fieldset{
+border:none;
+}
+
+/**********************************/
+/* Format
+   Font-size Duplication */
+/**********************************/
+
+th h1,th h2,th h3,th h4,th h5,th h6,th p,
+td h1,td h2,td h3,td h4,td h5,td h6,td p,
+
+th li,th dt,th dd,
+th td,th th,th select,th textarea,
+td li,td dt,td dd,
+td td,td th,td select,td textarea,
+
+li h1,li h2,li h3,li h4,li h5,li h6,li p,
+dd h1,dd h2,dd h3,dd h4,dd h5,dd h6,dd p,
+
+li li,li dd,li td,li th,li caption,
+dd li,dd td,dd th,dd select,dd textarea{
+font-size:100%;
+}
+
+
+
+/**********************************/
+/* others */
+/**********************************/
+
+/* IMG Border none */
+img {
+ border:none;
+ line-height:1;
+ vertical-align:top;
+ }
+
+/* List style none */
+ol,ul{
+list-style-type:none;
+}
+
+/* Label Clickable */
+label{
+cursor:pointer;
+}
+
+/* for safari reset */
+html:\66irst-child label{cursor:auto;}
+
+
+/**********************************/
+/* clearfix */
+/**********************************/
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	display: inline-block;
+}
+/* Hides from IE-mac \*/
+* html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}

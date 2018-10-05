@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <include
+        android:id="@+id/sidemenu"
+        layout="@layout/inc_sidemenu" />
+
+    <jp.co.tsutaya.android.ranking.slide.ScrollerLinearLayout
+        android:id="@+id/menu_content_side_slide_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/inc_header_top" />
+
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/bg_contents"
+            android:layout_below="@id/header">
+
+            <LinearLayout
+                android:id="@+id/menu_content"
+                android:layout_width="296dp"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/menu_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/btn_row1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false" >
+
+                        <Button
+                            android:id="@+id/btn_stock_search"
+                            style="@style/MenuButtonLargeFirst"
+                            android:layout_width="fill_parent"
+                            android:layout_weight="50"
+                            android:drawableLeft="@drawable/tsc_top_icon_stocksearch"
+                            android:tag="@integer/menu_stocksearch"
+                            android:text="@string/menu_stocksearch" />
+
+                        <Button
+                            android:id="@+id/btn_store_search"
+                            style="@style/MenuButtonLarge"
+                            android:layout_width="fill_parent"
+                            android:layout_weight="50"
+                            android:drawableLeft="@drawable/tsc_top_icon_storesearch"
+                            android:tag="@integer/menu_storesearch"
+                            android:text="@string/menu_storesearch" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_row2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false" >
+
+                        <Button
+                            android:id="@+id/btn_release_info"
+                            style="@style/MenuButtonSmallFirst"
+                            android:layout_width="fill_parent"
+                            android:layout_weight="30"
+                            android:drawableTop="@drawable/tsc_top_icon_releaseinfo"
+                            android:tag="@integer/menu_release"
+                            android:text="@string/menu_release" />
+
+                        <Button
+                            android:id="@+id/btn_ranking"
+                            style="@style/MenuButtonSmall"
+                            android:layout_width="fill_parent"
+                            android:layout_weight="30"
+                            android:drawableTop="@drawable/tsc_top_icon_ranking"
+                            android:tag="@integer/menu_ranking"
+                            android:text="@string/menu_ranking" />
+
+                        <Button
+                            android:id="@+id/btn_coupon"
+                            style="@style/MenuButtonSmall"
+                            android:layout_width="fill_parent"
+                            android:layout_weight="30"
+                            android:drawableTop="@drawable/tsc_top_icon_coupon"
+                            android:tag="@integer/menu_coupon"
+                            android:text="@string/menu_coupon" />
+
+                        <Button
+                            android:id="@+id/btn_favorite"
+                            style="@style/MenuButtonSmall"
+                            android:layout_width="fill_parent"
+                            android:layout_weight="30"
+                            android:drawableTop="@drawable/tsc_top_icon_favorite"
+                            android:tag="@integer/menu_favorite"
+                            android:text="@string/menu_favorite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_row3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false" >
+
+                        <Button
+                            android:id="@+id/btn_tsutaya_log"
+                            style="@style/MenuButtonSmallFirst"
+                            android:layout_width="fill_parent"
+                            android:layout_weight="30"
+                            android:drawableTop="@drawable/tsc_top_icon_tlog"
+                            android:tag="@integer/menu_tlog"
+                            android:text="@string/menu_tlog" />
+
+                        <Button
+                            android:id="@+id/btn_tsutaya_ar"
+                            style="@style/MenuButtonSmall"
+                            android:layout_width="fill_parent"
+                            android:layout_weight="30"
+                            android:drawableTop="@drawable/tsc_top_icon_tsutayaar"
+                            android:tag="@integer/menu_tsutayaar"
+                            android:text="@string/menu_tsutayaar" />
+
+                        <Button
+                            android:id="@+id/btn_related_searvice"
+                            style="@style/MenuButtonSmall"
+                            android:layout_width="fill_parent"
+                            android:layout_weight="30"
+                            android:drawableTop="@drawable/tsc_top_icon_relatedservice"
+                            android:tag="@integer/menu_related"
+                            android:text="@string/menu_related" />
+
+                        <Button
+                            android:id="@+id/btn_setting"
+                            style="@style/MenuButtonSmall"
+                            android:layout_width="fill_parent"
+                            android:layout_weight="30"
+                            android:drawableTop="@drawable/tsc_top_icon_setting"
+                            android:tag="@integer/menu_settings"
+                            android:text="@string/menu_settings" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_row4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false" >
+
+                        <Button
+                            android:id="@+id/btn_facebook"
+                            style="@style/MenuButtonWide"
+                            android:layout_width="fill_parent"
+                            android:drawableLeft="@drawable/tsc_top_icon_facebook"
+                            android:tag="@integer/menu_facebook" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </jp.co.tsutaya.android.ranking.slide.ScrollerLinearLayout>
+
+    <include
+        android:id="@+id/loading"
+        layout="@layout/loading"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/top_info"
+        layout="@layout/top_info" />
+
+</RelativeLayout>

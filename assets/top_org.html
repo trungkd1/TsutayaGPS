@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="user-scalable=no, width=device-width">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TSUTAYAサーチ</title>
+<link rel="stylesheet" href="css/top.css">
+<script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="js/json.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/top/css_browser_selector.js"></script>
+<script src="js/top/iscroll4.js"></script>
+<script type="text/javascript" src="js/topmenu.js"></script>
+<script type="text/javascript">
+	var myScroll,
+		hoverClassRegEx = new RegExp('(^|\\s)iScrollHover(\\s|$)'),
+		removeClass = function () {
+			if (this.hoverTarget) {
+				clearTimeout(this.hoverTimeout);
+				this.hoverTarget.className = this.hoverTarget.className.replace(hoverClassRegEx, '');
+				this.target = null;
+			}
+		};
+	function loaded() {
+			myScroll = new iScroll('wrapper', {
+				onBeforeScrollStart: function (e) {
+					var target = e.target;
+					clearTimeout(this.hoverTimeout);
+					while (target.nodeType != 1){ target = target.parentNode;}
+					this.hoverTimeout = setTimeout(
+					  function () {
+						if (!hoverClassRegEx.test(target.className)){
+							target.className = target.className ? target.className + ' iScrollHover' : 'iScrollHover';
+						}
+					  }, 80);
+					this.hoverTarget = target;
+					e.preventDefault();
+				},
+				onScrollMove: removeClass,
+				onBeforeScrollEnd: removeClass
+			});
+	}
+	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	document.addEventListener('DOMContentLoaded', loaded, false);	
+</script>
+</head>
+<body>
+<header id="header"> 
+  <div id="search">
+    <div id="logo"><img src="img/top/logo.png" width="100" height="20" alt="TSUTAYA"></div>
+    <form method="GET" action="search_result.html">  
+      <div class="selcont"> 
+        <div class="selbox"> 
+          <select name="item" id="stype">
+            <option value="201">すべての商品名</option>
+            <option value="202">すべての人名</option>
+            <optgroup label="レンタル">
+            <option value="211">レンタルDVD/商品名</option>
+            <option value="212">レンタルDVD/人物名</option>
+            <option value="213">レンタルCD/商品名</option>
+            <option value="214">レンタルCD/人物名</option>
+            <option value="215">レンタルCD/曲名</option>
+            <option value="216">レンタルコミック/商品名</option>
+            <option value="217">レンタルコミック/人物名</option>
+            </optgroup>
+            <optgroup label="販売">
+            <option value="221">販売DVD/商品名</option>
+            <option value="222">販売DVD/人物名</option>
+            <option value="223">販売CD/商品名</option>
+            <option value="224">販売CD/人物名</option>
+            <option value="225">販売CD/曲名</option>
+            <option value="226">販売本/商品名</option>
+            <option value="227">販売本/人物名</option>
+            <option value="228">販売ゲーム/商品名</option>
+            </optgroup>
+          </select>
+          <div class="selbtn"> </div>
+        </div>
+      </div>
+      <input type="hidden" name="_original-form-handler" value="1"> 
+      <div class="an_sea"> 
+        <input autocapitalize="off" autocorrect="off" autocomplete="off" type="search" id="sea" name="k" value="" />
+        <input type="submit" id="SbSbmtBtn" value="" /> 
+      </div>
+    </form>
+  </div>
+</header>
+<div id="wrapper">
+  <div id="scroller">
+  <div id="bnrBox">
+  	<iframe id="bnrFrame" src="http://www.tsutaya.co.jp/tsearch/top_bnr/top.html" framborder="0" marginheight="0" marginwidth="0"></iframe>
+  </div>
+    <ul class="menu">
+      <li class="menu1">
+        <p class="jp1"><span class="firstlist"><a href="app::menu::relcal.html">リリースカレンダー<br />
+          <span class="en">Release Calendar</span></a></span></p>
+      </li>
+      <li class="menu2">
+        <p class="jp2"><a href="app::menu::ranking_top.html">ランキング<br />
+          <span class="en">Ranking</span></a></p>
+      </li>
+      <li class="menu3">
+        <p class="jp3"><a href="app::menu::special.html">発掘良品<br />
+          <span class="en">Selection</span></a></p>
+      </li>
+      <li class="menu4">
+        <p class="jp4"><a href="app::menu::favorites.html">お気に入り<br />
+          <span class="en">Favorite</span></a></p>
+      </li>
+      <li class="menu5">
+        <p class="jp5"><a href="app::menu::climorcoupon.html">クーポン<br />
+          <span class="en">Coupon</span></a></p>
+      </li>
+      <li class="menu6">
+        <p class="jp6"><a href="app::menu::store_search.html">店舗検索<br />
+          <span class="en">Store Search</span></a></p>
+      </li>
+       <li class="menu7">
+        <p class="jp7"><a href="app::menu::tsutayalogapp.html">履歴<br />
+          <span class="en">History</span></a></p>
+      </li>
+      <li class="menu9">
+        <p class="jp9"><a href="app::menu::relatedservices.html">関連サービス<br />
+          <span class="en">Related Services</span></a></p>
+      </li>
+      <li class="menu10">
+        <p class="jp10"><a href="app::launch::jp.co.tsutaya.android.pp">TSUTAYA AR β<br />
+          <span class="en">TSUTAYA AR β</span></a></p>
+      </li> 
+      <li class="menu8">
+        <p class="jp8"><a href="app::menu::setting.html">設定<br />
+          <span class="en">Settings</span></a></p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<footer id="footer"></footer>
+</body>
+</html>

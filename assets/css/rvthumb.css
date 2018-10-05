@@ -1,0 +1,205 @@
+/* CSS Document format */
+
+/*
+1. Format Browser's defined style
+2. Format Font-size Duplication
+3. others
+*/
+
+
+
+/**********************************/
+/* Format Browser's defined style */
+/**********************************/
+
+h1,h2,h4,h5,h6,p,
+ul,ol,li,dl,dt,dd,
+table,th,td,
+form,fieldset,
+address,pre,em,strong,
+blockquote,q,cite,dfn,var,code,kbd,samp,
+abbr,acronym,article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary{
+margin:0;
+padding:0;
+border: 0;
+font-size:100%;
+font-weight:normal;
+font-style:normal;
+vertical-align: baseline;
+text-decoration:none;
+background:transparent;
+text-align: left;
+}
+
+abbr,acronym{
+border:none;
+font-variant:normal;
+}
+
+fieldset{
+border:none;
+}
+
+
+
+/**********************************/
+/* Format
+   Font-size Duplication */
+/**********************************/
+
+th h1,th h2,th h3,th h4,th h5,th h6,th p,
+td h1,td h2,td h3,td h4,td h5,td h6,td p,
+
+th li,th dt,th dd,
+th td,th th,th select,th textarea,
+td li,td dt,td dd,
+td td,td th,td select,td textarea,
+
+li h1,li h2,li h3,li h4,li h5,li h6,li p,
+dd h1,dd h2,dd h3,dd h4,dd h5,dd h6,dd p,
+
+li li,li dd,li td,li th,li caption,
+dd li,dd td,dd th,dd select,dd textarea{
+font-size:100%;
+}
+
+
+
+/**********************************/
+/* others */
+/**********************************/
+
+/* IMG Border none */
+img {
+ border:none;
+ line-height:1;
+ vertical-align:top;
+ }
+
+/* List style none */
+ol,ul{
+list-style-type:none;
+}
+
+/* Label Clickable */
+label{
+cursor:pointer;
+}
+
+/* for safari reset */
+html:\66irst-child label{cursor:auto;}
+
+
+/**********************************/
+/* clearfix */
+/**********************************/
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	display: inline-block;
+}
+/* Hides from IE-mac \*/
+* html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}
+
+/**********************************/
+/* main contents */
+/**********************************/
+
+a{
+	text-decoration:none;
+	color:#333;
+	-webkit-tap-highlight-color:#8a9cb3;
+}
+.wrap{
+	padding:0 9px;
+	margin-top:10px;
+	background-color:#f1f1f1;
+}
+.content h2{
+	background-color: #999999;
+	clear:both;
+	padding: 5px 0 5px 10px;
+}
+.content h2 span{
+	color: #fff;
+	-webkit-text-shadow: none;
+	text-shadow: none;
+}
+
+*:first-child + html .content ul li a {
+	min-height: 1%;
+}
+* html .content ul li a {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}
+
+.item_list {
+	margin:12px auto;
+	padding: 0 10px;
+}
+.item_list ul:after {
+	content: "";
+	float: none;
+	clear: both;
+	display: block;
+	height: 0;
+}
+
+
+.content li {
+	list-style-type:none;
+	width:31%;
+	height:145px;
+	float:left;
+	background-color:#ffffff;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	margin:1%;
+	text-align:center;
+	overflow:hidden;
+	-moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+}
+
+.item_list li a {
+	display:block;
+	height:145px;
+}
+p.image {
+	width:100%;
+	height:85px;
+	text-align:center;
+	vertical-align:bottom;
+	margin-top: 5px;
+}
+p.image img {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+p.title {
+	font-size:10px;
+	line-height:1.2em;
+	height: 4.8em;
+	margin:0 5px;
+	text-align:center;
+	word-break: break-all;
+	color: #333333;
+	overflow:hidden;
+}
+

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TSUTAYA</string>
+
+    <!-- ヘッダーメニューボタン文言 -->
+    <string name="h_menu_button">Menu</string>
+    <string name="icon">ICON</string>
+
+    <!-- トップメニューボタン文言 -->
+    <string name="menu_stocksearch">在庫検索</string>
+    <string name="menu_storesearch">店舗検索</string>
+    <string name="menu_release">リリース情報</string>
+    <string name="menu_ranking">ランキング</string>
+    <string name="menu_coupon">クーポン</string>
+    <string name="menu_favorite">お気に入り</string>
+    <string name="menu_tlog">ご利用履歴</string>
+    <string name="menu_tsutayaar">TSUTAYA AR</string>
+    <string name="menu_related">関連サービス</string>
+    <string name="menu_settings">設定</string>
+    <string name="menu_facebook">TSUTAYA Facebook</string>
+
+    <string name="menu_addproduct">お気に入り追加</string>
+    <string name="menu_delproduct">お気に入り削除</string>
+    <string name="menu_updated">更新</string>
+    <string name="menu_mylocation">現在地</string>
+    <string name="menu_home">TOP</string>
+    <string name="menu_top">ホーム</string>
+
+    <string name="menu_special">発掘良品</string>
+
+
+    <!-- 電話 -->
+    <string name="call_title">電話</string>
+    <string name="call_yes_text">発信</string>
+    <string name="call_no_text">キャンセル</string>
+
+    <!-- 店舗検索 -->
+    <string name="waiting_storedata">店舗情報取得中...</string>
+    <string name="searching_storedata">検索中...</string>
+    <string name="searching_stockdata">在庫情報取得中...</string>
+    <string name="over_limit_storedata">検索数過大です。地図を拡大してください。</string>
+    <string name="storemap_info_search">お探しのお店</string>
+    <string name="storemap_info_other">周辺の店舗...</string>
+    <string name="storemap_info_stock_worning">在庫状況は現時点のものではありません。\n必ずお店に在庫状況をご確認ください。</string>
+
+    <string name="stockmap_info_stockexists">在庫あり</string>
+    <string name="stockmap_info_stocknone">在庫なし</string>
+    <string name="stockmap_info_stockno">取扱なし</string>
+    <string name="stockmap_info_searching">検索中...</string>
+    <string name="searching_mylocation">現在地を取得中...</string>
+
+    <string name="stockmap_info_sell">セル</string>
+    <string name="stockmap_info_rental">レンタル</string>
+
+    <string name="storemap_title">店舗位置検索</string>
+    <string name="stockmap_title">マップ検索</string>
+
+    <!-- 発掘良品URL -->
+    <string name="url_works">http://www.tsutaya.co.jp/works/</string>
+    <string name="url_movie">http://www.tsutaya.co.jp/movie/</string>
+
+    <!-- クリモルクーポンURL -->
+    <string name="url_climor">http://c.tsutaya.co.jp/</string>
+    <string name="url_bl">https://www.tsutaya.co.jp/SpTsutayaSearch/</string>
+
+    <!-- リリースカレンダーURL -->
+    <string name="url_products">"http://store.tsutaya.co.jp/item/"</string>
+
+    <!-- TSUTAYA Facebook URL -->
+    <string name="url_facebook">http://m.facebook.com/TSUTAYA</string>
+
+    <!-- エラー文言 -->
+    <string name="error_title">エラー</string>
+    <string name="error_internet_offline">インターネット接続がオフラインのようです。</string>
+    <string name="error_gps_unuseable">位置情報の取得に失敗しました。</string>
+    <string name="error_storedata_updating">店舗データ更新中・・・</string>
+    <string name="error_call_unuse">電話機能が使用できません。</string>
+
+    <!-- ページタイトル文言 -->
+    <string name="title_coupon">クーポン・お得情報</string>
+    <string name="title_tlog">TSUTAYA履歴</string>
+
+    <!-- 外部アプリケーションID -->
+    <string name="app_id_tsutata_ar">jp.co.tsutaya.android.pp</string>
+    
+    <string name="register_shop_button">お店を登録する</string>
+
+    <!-- Banner url -->
+   <string name="banner_url_debug">http://192.168.1.92/tsutaya_utest/banner_img.php</string>
+    <string name="banner_url_release">http://www.tsutaya.co.jp/tsearch/topics/bnr/tsc_feature_cp_tac.jpg</string>
+	<string name="banner_onclick_url_release">http://www.tsutaya.co.jp/tsearch/info/index.html</string>
+	
+    
+    <!-- top popup url -->
+    <string name="top_popup_url_debug">http://192.168.1.92/tsutaya_utest/popup.php</string>
+    <string name="top_popup_url_release">http://www.tsutaya.co.jp/tsearch/info/index.html</string>
+    <string name="current_location_updated">現在位置から店舗検索</string>
+    <string name="unregistered">未登録の店舗</string>
+    <string name="registered">登録済みの店舗</string>
+    <string name="loading">読み込み中...</string>
+    
+    <!-- Store map -->    
+    <string name="title_error_network">店舗情報の取得に失敗しました</string>
+    <string name="mes_error_network">ネットワークが利用できない可能性があります。電波状況を確認し再度実行してください。</string>
+    
+    <string name="title_error_gps">位置情報サービスが無効です</string>
+    <string name="mes_error_gps">TSUTAYAアプリでは現在地情報を利用いたします。端末の設定で位置情報サービスをオンにしてください。</string>
+    
+    <string name="title_error_location">位置情報の取得に失敗しました</string>
+    <string name="mes_error_location">位置情報を取得出来ませんでした。「位置情報サービス」がOFFの場合位置情報が取得出来ない可能性があります。設定をご確認下さい。</string>
+    <string name="ok">OK</string>
+    <string name="title_error_loaddata">通信エラーが発生しました</string>
+    
+    <string name="title_to_setting">位置情報取得エラー</string>
+    <string name="mes_to_setting">位置情報サービスがOFFになっています。</string>
+    
+    <string name="close">キャンセル</string>
+    <string name="settings">設定</string>
+    <string name="can_not_download_store_map_file">店舗データが取得できませんでした。</string>
+ 
+</resources>

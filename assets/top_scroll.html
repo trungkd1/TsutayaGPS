@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>TSUTAYAサーチ</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/top.css">
+    <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+    <script type="text/javascript" src="js/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="js/json.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/top/css_browser_selector.js"></script>
+    <script type="text/javascript" src="js/top/iscroll4.js"></script>
+    <script type="text/javascript" src="js/topmenu.js"></script>
+    <script type="text/javascript">
+      var myScroll, hoverClassRegEx = new RegExp('(^|\\s)iScrollHover(\\s|$)'), removeClass = function(){
+          if (this.hoverTarget) {
+              clearTimeout(this.hoverTimeout);
+              this.hoverTarget.className = this.hoverTarget.className.replace(hoverClassRegEx, '');
+              this.target = null;
+          }
+      };
+      function pullUpAction(){
+          setTimeout(function(){ // <-- Simulate network congestion, remove setTimeout from production!
+              var contentsEl, fbEl;
+              contentsEl = document.getElementById('contents');
+              fbEl = document.createElement('div');
+              fbEl.id = "fbContents";
+              fbEl.innerHTML = "<iframe src='http://m.facebook.com/hakkutsuryohin'></iframe>";
+              //fbEl.innerHTML = '<ul></ul>';
+              contentsEl.appendChild(fbEl);
+              getFeed(function(){
+                  myScroll.refresh(); // Remember to refresh when contents are loaded (ie: on ajax completion)
+              });
+              
+          }, 1000); // <-- Simulate network congestion, remove setTimeout from production!
+      }
+      
+      function loaded(){
+          pullUpEl = document.getElementById('pullUp');
+          pullUpOffset = pullUpEl.offsetHeight;
+          myScroll = new iScroll('wrapper', {
+              useTransition: true,
+              topOffset: 0,
+              onBeforeScrollStart: function(e){
+                  var target = e.target;
+                  clearTimeout(this.hoverTimeout);
+                  while (target.nodeType != 1) {
+                      target = target.parentNode;
+                  }
+                  this.hoverTimeout = setTimeout(function(){
+                      if (!hoverClassRegEx.test(target.className)) {
+                          target.className = target.className ? target.className + ' iScrollHover' : 'iScrollHover';
+                      }
+                  }, 80);
+                  this.hoverTarget = target;
+                  e.preventDefault();
+              },
+              onBeforeScrollEnd: removeClass,
+              onRefresh: function(){
+                  if (pullUpEl.className.match('loading')) {
+                      pullUpEl.className = '';
+                      pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
+                  }
+              },
+              onScrollMove: function(){
+                  if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+                      pullUpEl.className = 'flip';
+                      pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Release to refresh...';
+                      this.maxScrollY = this.maxScrollY;
+                  } else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+                      pullUpEl.className = '';
+                      pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
+                      this.maxScrollY = pullUpOffset;
+                  }
+              },
+              onScrollEnd: function(){
+                  if (pullUpEl.className.match('flip')) {
+                      pullUpEl.className = 'loading';
+                      pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Loading...';
+                      pullUpAction(); // Execute custom function (ajax call?)
+                  }
+              }
+          });
+      }
+      
+      document.addEventListener('touchmove', function(e){
+          e.preventDefault();
+      }, false);
+      document.addEventListener('DOMContentLoaded', loaded, false);
+      
+      // facebook系
+      var formatData = function(date){
+          var d = new Date(date);
+          //ゼロパディング（2桁）にしない場合
+          //return (d.getFullYear() + '.' + (d.getMonth() + 1) + '.' + d.getDate());
+          return (d.getFullYear() + '.' + ("0" + (d.getMonth() + 1)).slice(-2) + '.' + ("0" + d.getDate()).slice(-2));
+      };
+      var replaceURL = function(url){
+          url = url.replace(/(\/l.php\?u=http%3A%2F%2F)([\x21-\x7e]+)(&amp;h=[\x21-\x7e]+&amp;s=1)/gi, 'http://$2');
+          return unescape(url);
+      };
+      var getFeed = function(callback){
+          $.getJSON('http://ajax.googleapis.com/ajax/services/feed/load?callback=?', {
+              q: 'http://www.facebook.com/feeds/page.php?id=159853434095690&format=rss20',
+              v: '1.0',
+              num: 10
+          }, function(data){
+              $.each(data.responseData.feed.entries, function(i, item){
+                  $('#fbContents ul').append('<li><span>' + formatData(item.publishedDate) + '</span>' +
+                  '<p>' + replaceURL(item.content) + '</p>' +
+                  '</li>');
+              });
+              if (typeof callback == 'function') callback();
+          });
+      };
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="scroller">
+        <div id="contents">
+          <div id="slideshow">
+            <div class="slideimage">
+              <img src="img/top/dummy_slide.png" alt="" />
+            </div>
+            <div class="slideinfo">
+              <h2>メン・イン・ブラック３</h2>
+              <p>レンタル＆セル同時リリース！期間限定プレゼントも！</p>
+            </div>
+          </div>
+          <ul class="menu large">
+            <li><a href="app::menu::store_search.html">在庫検索</a></li>
+            <li><a href="app::menu::store_search.html">店舗検索</a></li>
+          </ul>
+          <ul class="menu small">
+            <li><a href="app::menu::relcal.html">リリースカレンダー</a></li>
+            <li><a href="app::menu::ranking_top.html">ランキング</a></li>
+            <li><a href="app::menu::climorcoupon.html">クーポン</a></li>
+          </ul>
+          <ul class="menu small">
+            <li><a href="app::menu::favorites.html">お気に入り</a></li>
+            <li><a href="app::menu::tsutayalogapp.html">履歴</a></li>
+            <li><a href="app::menu::setting.html">設定</a></li>
+          </ul>
+          <ul class="menu small">
+            <li><a href="app::menu::special.html">発掘良品</a></li>
+            <li><a href="app::menu::relatedservices.html">関連サービス</a></li>
+            <li><a href="app::launch::jp.co.tsutaya.android.pp">TSUTAYA AR β</a></li>
+          </ul>
+        </div>
+        <div id="pullUp">
+          <span class="pullUpIcon"></span>
+          <span class="pullUpLabel">Pull up to refresh...</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
